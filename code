@@ -3,17 +3,18 @@
 <head>
     <title>AITHA SAI TEJA</title>
     <style>
-        #c{background-color: rgb(89, 89, 159);}
-        #b{background-color: rgb(108, 185, 140);}
-        #e{background-color: rgb(124, 121, 180);}
-        #g{background-color: rgb(175, 92, 19);}
+        #c{background-color: rgb(180, 180, 221);}
+        #b{background-color: rgb(6, 237, 102);}
+        #e{background-color: rgb(102, 216, 176);}
+        #g{background-color: rgb(176, 207, 153);}
         #res{background-color: rgb(186, 216, 202);}
         #f{background-color: rgb(6, 6, 3);}
+        #h{background-color: rgb(191, 43, 139);}
     </style>
 </head>
 <body>
     <script>
-     function show(i)
+        function show(i)
         {
             document.getElementById("res").value+=i;
         }
@@ -26,43 +27,103 @@
             var output=eval(document.getElementById("res").value);
             document.getElementById("res").value=output;
         }
-        </script>
+
+        function sqrt()
+        {
+            var x= document.getElementById("res").value;
+            var y=Math.sqrt(x);
+            document.getElementById("res").value=y;
+        }
+
+        function cbrt()
+        {
+            var x= document.getElementById("res").value;
+            var y=Math.cbrt(x);
+            document.getElementById("res").value=y;
+        }
+
+        function power()
+        {
+            var x= document.getElementById("res").value;
+            var p= document.getElementById("res").value;
+            var y=Math.pow(x,p);
+            document.getElementById("res").value=y;
+        }
+
+        function slice()
+        {
+            var x= document.getElementById("res").value;
+            document.getElementById("res").value=x.slice(0,-1);
+        }
+
+        function sin()
+        {
+            var x=document.getElementById("res").value;
+            var sol=Math.sin(x);
+            document.getElementById("res").value=sol;
+        }
+        function cos()
+        {
+            var x=document.getElementById("res").value;
+            var sol=Math.cos(x);
+            document.getElementById("res").value=sol;
+        } 
+        function tan()
+        {
+            var x=document.getElementById("res").value;
+            var sol=Math.tan(x);
+            document.getElementById("res").value=sol;
+        }
+
+    </script>
 
    
     <table border="1" id=f>
 
         <tr>
-            <td colspan=4 id=g align="center">
+            <td colspan=5 id=g align="center">
                 Simple Calculator
             </td>
         </tr>
 
         <tr>
-            <td colspan =3><input type="text" id="res"></td>
+            <td colspan =4><input type="text" id="res"></td>
             <td id=b align="center"><botton onclick="ac()">AC</botton></td>
         </tr>
         <tr>
+            <td id=h align="center"><botton onclick="slice()">CE    </botton> </td>
             <td id=c align="center"><botton onclick="show('1')">1</botton> </td>
             <td id=c align="center"><botton onclick="show('2')">2</botton> </td>
             <td id=c align="center"><botton onclick="show('3')">3</botton> </td>
             <td id=e align="center"><botton onclick="show('+')">+</botton> </td>
         </tr>
         <tr>
+            <td id=c align="center"><botton onclick="sin()">sin</botton> </td>
             <td id=c align="center"><botton onclick="show('4')">4</botton> </td>
             <td id=c align="center"><botton onclick="show('5')">5</botton> </td>
             <td id=c align="center"><botton onclick="show('6')">6</botton> </td>
             <td id=e align="center"><botton onclick="show('-')">-</botton> </td>
         </tr>
         <tr>
+            <td id=c align="center"><botton onclick="cos()">cos</botton> </td>
             <td id=c align="center"><botton onclick="show('7')">7</botton> </td>
             <td id=c align="center"><botton onclick="show('8')">8</botton> </td>
             <td id=c align="center"><botton onclick="show('9')">9</botton> </td>
             <td id=e align="center"><botton onclick="show('*')">*</botton> </td>
         </tr>
         <tr>
+            <td id=c align="center"><botton onclick="tan()">tan</botton> </td>
             <td id=c align="center"><botton onclick="show('0')">0</botton> </td>
-            <td id=e align="center"><botton onclick="show('%')">%</botton> </td>
-            <td id=e align="center"><botton onclick="show('/')">/</botton> </td>
+            <td id=c align="center"><botton onclick="show('%')">%</botton> </td>
+            <td id=c align="center"><botton onclick="show('/')">/</botton> </td>
+            
+        </tr>
+
+        <tr>
+            <td id=c align="center"><botton onclick="show('.')">.</botton> </td>
+            <td id=c align="center"><botton onclick="sqrt()">sqrt</botton> </td>
+            <td id=c align="center"><botton onclick="cbrt()">cbrt</botton> </td>
+            <td id=c align="center"><botton onclick="power()">pow  </botton> </td>
             <td id=e align="center"><botton onclick="cal()">=</botton> </td>
         </tr>
     </table>
